@@ -9,7 +9,8 @@ namespace Tyuiu.BalinVV.Sprint3.Task0.V11.Lib
 
             for (int i = startValue; i <= stopValue; i++)
             {
-                sumSeries += 1.0 / Math.Pow(value, 4); 
+                sumSeries += Math.Pow(1.0 / Math.Pow(value, i), 2);
+
             }
 
             return Math.Round(sumSeries, 3);
