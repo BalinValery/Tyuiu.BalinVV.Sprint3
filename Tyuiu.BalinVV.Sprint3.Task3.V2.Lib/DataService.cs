@@ -5,15 +5,26 @@ namespace Tyuiu.BalinVV.Sprint3.Task3.V2.Lib
     {
         public int GetMaxCharCount(string value, char item)
         {
-            int cout = 0;
+            int maxCount = 0;
+            int currentCount = 0;
+
             foreach (char chr in value)
             {
                 if (chr == item)
                 {
-                    cout++;
+                    currentCount++;
+                    if (currentCount > maxCount)
+                    {
+                        maxCount = currentCount;
+                    }
+                }
+                else
+                {
+                    currentCount = 0;
                 }
             }
-            return (cout);
+
+            return maxCount;
         }
     }
 }
